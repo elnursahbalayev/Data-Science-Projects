@@ -4,7 +4,6 @@ import matplotlib.pyplot as plt
 
 st.title('Production Engineering 1')
 st.header('IPR Curves')
-
 status = st.radio('What do you want to do', ['Calculations', 'Plot IPR curve'])
 if status == 'Calculations':
     question = st.selectbox('What do you want to find? ', ['Reservoir Pressure',
@@ -13,8 +12,8 @@ if status == 'Calculations':
                                                            'Production Index',
                                                            'Maximum Flow Rate'])
 
-    Pres = float(st.text_input('Enter Reservoir Pressure: '))
-    Pwf = float(st.text_input('Enter Flowing Wellbore Pressure: '))
+    Pres = float(st.number_input('Enter Reservoir Pressure: '))
+    Pwf = float(st.number_input('Enter Flowing Wellbore Pressure: '))
     Q = float(st.text_input('Enter Flow Rate'))
     Pb = float(st.text_input('Enter Bubble Pressure'))
     J = float(st.text_input('Enter Productivity Index'))
